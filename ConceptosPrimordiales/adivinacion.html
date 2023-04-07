@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA JUEGO DE ADIVINACION</h1>
+
+<script>
+ ///*****DESAFIO*****///
+//1 – Crea una función de lotería que reciba un número n y sortee un número entre 0 a n, retornando ese valor. 
+//De esta forma, en vez de escribir var numeroPensado = Math.round(Math.random()*n);, 
+//escribirás var numeroPensado = sorteo(n);. Realiza esa modificación, creando una nueva función y utilízala de forma correcta.
+
+//2 – Hacer que tu juego exhiba, cuando el usuario falle el intento, si el número 
+//lanzado era mayor o menor al número pensando por el programa.
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+    // ***************************
+	//funcion agregada debido a que math.random entrega un valor flotante entre 0 y 1, se le multiplica 
+	//un valor n donde sera el maximo y la math.round lo aproxima
+	function sorteo(n){
+		return Math.round(Math.random()*n)
+
+	}
+    //****************************
+    var numeroPensado = sorteo(5);
+    var numeroLanzado = parseInt(prompt("Ingrese un numero del 0 al 10"));
+    if(numeroPensado == numeroLanzado){
+        imprimir("usted acerto");
+    }
+    else{
+        imprimir("Usted erro, el numero pensado era " + numeroPensado )
+    }
+
+
+ 
+
+</script>
