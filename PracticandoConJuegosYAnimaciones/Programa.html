@@ -18,6 +18,19 @@
 
     pincel.fillStyle = "red"
     pincel.fillRect(400,0,200,400)
+//***********Trazo de lienas para figuras geometricas************
+    pincel.fillStyle = "yellow";   //propiedad 
+	pincel.beginPath();           
+	pincel.moveTo(300,200);
+	pincel.lineTo(200,400);
+	pincel.lineTo(400,400);
+	pincel.fill();
+//***********Funcion para crear circulos*************
+	pincel.fillStyle = "blue";   //propiedad
+	pincel.beginPath();          
+	pincel.arc(300,200,50,0,2*3.14);
+	pincel.fill();
+
 
 
 </script>
